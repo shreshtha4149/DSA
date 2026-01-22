@@ -1,0 +1,24 @@
+class Node {
+    int data;
+    Node left, right;
+
+    Node(int value) {
+        data = value;
+        left = right = null;
+    }
+}
+
+public class SimpleTree {
+    public static void main(String[] args) {
+
+        // Creating nodes
+        Node root = new Node(1);
+        root.left = new Node(2);
+        root.right = new Node(3);
+
+        // Printing data
+        System.out.println("Root node: " + root.data);
+        System.out.println("Left child: " + root.left.data);
+        System.out.println("Right child: " + root.right.data);
+    }
+}
