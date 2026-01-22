@@ -1,0 +1,87 @@
+import java.util.Scanner;
+
+public class BasicsInJava {
+
+    // Function (like C++ function)
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // 1️⃣ Variables & Data Types
+        int a = 10;
+        float b = 5.5f;
+        double c = 12.345;
+        char ch = 'A';
+        boolean flag = true;
+
+        System.out.println("Integer: " + a);
+        System.out.println("Float: " + b);
+        System.out.println("Double: " + c);
+        System.out.println("Character: " + ch);
+        System.out.println("Boolean: " + flag);
+
+        // 2️⃣ Input
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        // 3️⃣ If-Else
+        if (n % 2 == 0) {
+            System.out.println("Even Number");
+        } else {
+            System.out.println("Odd Number");
+        }
+
+        // 4️⃣ Switch Case
+        System.out.print("Enter a day number (1-3): ");
+        int day = sc.nextInt();
+
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid day");
+        }
+
+        // 5️⃣ For Loop
+        System.out.println("For Loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // 6️⃣ While Loop
+        System.out.println("While Loop:");
+        int i = 1;
+        while (i <= 5) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println();
+
+        // 7️⃣ Array
+        int[] arr = {10, 20, 30, 40};
+
+        System.out.println("Array Elements:");
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+
+        // 8️⃣ Function Call
+        int sum = add(5, 7);
+        System.out.println("Sum using function: " + sum);
+
+        sc.close();
+    }
+}
